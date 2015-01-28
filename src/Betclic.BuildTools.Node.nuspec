@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Betclic.BuildTools.Node</id>
+        <version>#version#</version>
+        <title>Betclic.BuildTools.Node</title>
+        <authors>Betclic</authors>
+        <owners>Betclic Team</owners>      
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Portable and standalone node+npm+git for Front end dev and msbuild integration</description>
+        <copyright></copyright>
+        <tags>node npm git frontend build msbuild</tags>
+    </metadata>
+    <files>
+        <file src="bin\*.cmd" target="content\.bin\" />
+        <file src="node_modules\**\*" target="node_modules\" />
+    	<file src="node.exe" target="node.exe" />
+        <file src="tools\*.ps1" target="tools\" />
+  </files>
+</package>
