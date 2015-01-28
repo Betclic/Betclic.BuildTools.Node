@@ -14,7 +14,7 @@ You have to install the nuget package first via
 PM > Install-Package  Betclic.BuildTools.Node
 `
 
-Add a new [MyCustomPackageTesterMyProjectName].wpp.targets file into your Visual project. This file allow you to run MsBuild tasks, especially node&npm commands for your front end build process (gulp, grunt, bower, ...).
+Add a new [MyCustomPackageTesterMyProjectName].wpp.targets file into your Visual Studio project. This file allows you to run MsBuild tasks, especially node & npm commands for your front end build process (gulp, grunt, bower, ...).
 
 A very simple *.wpp.targets could be
 
