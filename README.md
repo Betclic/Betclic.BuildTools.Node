@@ -3,8 +3,8 @@ Portable & standalone build tools (node+npm+git) for Front end dev and MsBuild i
 
 Motivations
 ---------------
-TODO
-
+We were experiencing some random EPERM "operation not permitted" errors during builds using the Node.js nuget package. It turned out using the latest Node.Js version solved the problem. So we packaged the latest version of Node.js, Npm and Git and it worked like a charm!
+ 
 How to use ?
 --------------
 
