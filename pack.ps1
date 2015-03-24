@@ -20,8 +20,11 @@ Copy-Item -Path $sourcePath"*" -Destination $destPath -Recurse
 Write-Host "updating package.json" 
 (Get-Content $destPath"package.json").Replace("#version#", $version) | Set-Content $destPath"package.json"
 
-Write-Host "Running npm install"
+Write-Host "Running npm update"
 Start-process "npm" "update --save" -WorkingDirectory $destPath -NoNewWindow -PassThru -Wait | Out-Null   
+
+Write-Host "Running npm ddp"
+Start-process "npm" "ddp --save" -WorkingDirectory $destPath -NoNewWindow -PassThru -Wait | Out-Null 
 
 Write-Host "Downloading latest node.exe version"
 $webclient = New-Object System.Net.WebClient
