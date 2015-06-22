@@ -10,3 +10,6 @@ Delete-Bin $cmd
 
 $cmd = '.bin\git.cmd'
 Delete-Bin $cmd
+
+$cmd = '.bin\rimraf.cmd'
+Delete-Bin $cmd

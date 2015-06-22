@@ -21,7 +21,7 @@ Write-Host "updating package.json"
 (Get-Content $destPath"package.json").Replace("#version#", $version) | Set-Content $destPath"package.json"
 
 Write-Host "Running npm update"
-Start-process "npm" "update --save" -WorkingDirectory $destPath -NoNewWindow -PassThru -Wait | Out-Null   
+Start-process "npm" "update --production --no-optional --save" -WorkingDirectory $destPath -NoNewWindow -PassThru -Wait | Out-Null   
 
 Write-Host "Running npm ddp"
 Start-process "npm" "ddp --save" -WorkingDirectory $destPath -NoNewWindow -PassThru -Wait | Out-Null 
@@ -39,6 +39,7 @@ Write-Host "updating cmd files"
 (Get-Content $destPath"bin\node.cmd").Replace("#version#", $version) | Set-Content $destPath"bin\node.cmd"
 (Get-Content $destPath"bin\npm.cmd").Replace("#version#", $version) | Set-Content $destPath"bin\npm.cmd"
 (Get-Content $destPath"bin\git.cmd").Replace("#version#", $version) | Set-Content $destPath"bin\git.cmd"
+(Get-Content $destPath"bin\rimraf.cmd").Replace("#version#", $version) | Set-Content $destPath"bin\rimraf.cmd"
 
 Write-Host "generating nuget package"
 $args = "Pack "+"$destPath\$nuspecfile"

@@ -16,3 +16,8 @@ $cmd = '.bin\git.cmd'
 Set-BuildAction $cmd 'None'
 Update-BinPaths $cmd
 Add-BinToPath $cmd
+
+$cmd = '.bin\rimraf.cmd'
+Set-BuildAction $cmd 'None'
+Update-BinPaths $cmd
+Add-BinToPath $cmd
