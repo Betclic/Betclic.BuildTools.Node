@@ -36,3 +36,5 @@ How to Build ?
 `
 PS > .\pack.ps1 -version [VERSION]
 `
+
+Note : requires global install of node, npm and (flatten-packages) [https://www.npmjs.com/package/flatten-packages]

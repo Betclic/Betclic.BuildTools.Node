@@ -26,6 +26,9 @@ Start-process "npm" "update --production --no-optional --save" -WorkingDirectory
 Write-Host "Running npm ddp"
 Start-process "npm" "ddp --save" -WorkingDirectory $destPath -NoNewWindow -PassThru -Wait | Out-Null 
 
+Write-Host "Running flatten-packages"
+Start-process "flatten-packages" -WorkingDirectory $destPath -NoNewWindow -PassThru -Wait | Out-Null 
+
 Write-Host "Downloading latest node.exe version"
 $webclient = New-Object System.Net.WebClient
 $url = "http://nodejs.org/dist/latest/x64/node.exe"
