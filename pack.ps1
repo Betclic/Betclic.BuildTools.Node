@@ -31,7 +31,7 @@ Start-process "flatten-packages" -WorkingDirectory $destPath -NoNewWindow -PassT
 
 Write-Host "Downloading latest node.exe version"
 $webclient = New-Object System.Net.WebClient
-$url = "http://nodejs.org/dist/latest/x64/node.exe"
+$url = "https://nodejs.org/dist/v0.11.5/x64/node.exe"
 $file = "$destPath\node.exe"
 $webclient.DownloadFile($url,$file)
 
