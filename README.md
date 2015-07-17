@@ -42,7 +42,7 @@ Note : requires global install of node, npm and (flatten-packages) [https://www.
 Example
 --------------
 Here is a sample wpp.targets file. 
-
+```
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Target Name="Install" AfterTargets="PreBuildEvent" Condition="'$(Configuration)' != 'Debug'">
     <Exec Command=".bin\npm install --production --no-optional" />
@@ -63,7 +63,7 @@ Here is a sample wpp.targets file.
     </ExcludeFromPackageFolders>
   </ItemGroup>
 </Project>
-
+```
 Comments :
 - Running 'Clean' in both cases (success and failure) is important to clean up node_modules (long path issue on Windows)
 - The main target is not executed when Config is set to debug. You can use the command line in this case
