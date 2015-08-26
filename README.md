@@ -1,6 +1,9 @@
 # Betclic.BuildTools.Node
 Portable & standalone build tools (node+npm+git) for Front end dev and MsBuild integration. 
 
+[![Nuget](https://img.shields.io/nuget/dt/Betclic.BuildTools.Node.svg)](http://nuget.org/packages/Betclic.BuildTools.Node)
+[![Nuget](https://img.shields.io/nuget/v/Betclic.BuildTools.Node.svg)](http://nuget.org/packages/Betclic.BuildTools.Node)
+
 Motivations
 ---------------
 We were experiencing some random EPERM "operation not permitted" errors during builds using the Node.js nuget package. It turned out using the latest Node.Js version solved the problem. So we packaged the latest version of Node.js, Npm and Git and it worked like a charm!
