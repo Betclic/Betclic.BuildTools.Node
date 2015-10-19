@@ -23,15 +23,9 @@ Write-Host "updating package.json"
 Write-Host "Running npm update"
 Start-process "npm" "update --production --no-optional --save" -WorkingDirectory $destPath -NoNewWindow -PassThru -Wait | Out-Null   
 
-Write-Host "Running npm ddp"
-Start-process "npm" "ddp --save" -WorkingDirectory $destPath -NoNewWindow -PassThru -Wait | Out-Null 
-
-Write-Host "Running flatten-packages"
-Start-process "flatten-packages" -WorkingDirectory $destPath -NoNewWindow -PassThru -Wait | Out-Null 
-
 Write-Host "Downloading latest node.exe version"
 $webclient = New-Object System.Net.WebClient
-$url = "https://nodejs.org/dist/v0.11.5/x64/node.exe"
+$url = "https://nodejs.org/dist/latest/win-x64/node.exe"
 $file = "$destPath\node.exe"
 $webclient.DownloadFile($url,$file)
 
