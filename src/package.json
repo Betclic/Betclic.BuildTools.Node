@@ -4,9 +4,9 @@
   "description": "Portable & standalone node+npm+git for Front end dev and msbuild integration",
   "main": "index.js",
   "dependencies": {
-    "nogit": "whyleee/nogit",
-    "npm": "3.3.9",
-    "rimraf": "^2.4.1"
+    "nogit": "^0.1.0",
+    "npm": "^3.5.2",
+    "rimraf": "^2.4.4"
   },
   "devDependencies": {},
   "author": "",
